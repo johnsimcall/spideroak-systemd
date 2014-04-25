@@ -1,0 +1,12 @@
+#!/bin/bash
+# Start/Stop script for SpiderOak to work `nicer` with per-user options
+#
+# params:
+# -> $1 = user home directoy, where the `.spideroak.rc` file is
+
+if [ -f "$1/.spideroak.rc" ]; then
+    source "$1/.spideroak"
+fi
+
+echo $$ > /var/run/SpiderOak.pid
+exec /usr/bin/SpiderOak --headless ${ARG:-}

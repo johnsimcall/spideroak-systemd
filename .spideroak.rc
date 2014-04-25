@@ -1,0 +1,8 @@
+## Configuration for SpiderOak service
+# Options that get passed to SpiderOak. '--headless' is automatically specified
+# by the appropriate script or configuration file. The available options are at
+# https://spideroak.com/faq/question s/67/how_can_i_use_spideroak_from_the_commandline/
+
+# Currently, the arguments must be specified via the `ARG` variable
+# For example:
+#    ARG="--purge-historical-versions h24,d14,w4,m6,y"

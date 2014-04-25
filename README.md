@@ -1,29 +1,32 @@
 # spideroak-systemd
 
-** Work in Progress **
+**Work in Progress**
 
-This project provides tools for starting and stopping the SpiderOak service
-(https://www.spideroak.com) from a systemd environment. This is based off
-the work done by funnelfiasco
+This project provides the systemd unit file for starting and stopping the
+SpiderOak service (https://www.spideroak.com) from a systemd environment. This
+is based off the work done by funnelfiasco
 (https://github.com/funnelfiasco/spideroak-init).
 
-* This repository includes the following files:
-    * COPYING.md         -- the license (public domain where applicable,
-                            CC0 elsewhere) 
-    * README.md          -- this file
-    * SpiderOak          -- the configuration file
-    * spideroak@.service -- a systemd service file
+This repository includes the following files:
+* COPYING.md         -- the license (public domain where applicable, 
+                        CC0 elsewhere) 
+* README.md          -- this file
+* `.spideroak.rc`      -- the configuration file
+* `spideroak`          -- the systemd script which deal with applying the
+                          configuration from `.spideroak.rc`
+* `spideroak@.service` -- the systemd service file
 
 ## Installation
 To install on a system using systemd, copy the file 'spideroak@.service' to
-/usr/lib/systemd/system/spideroak@.service and the file 'SpiderOak' to
-/etc/sysconfig/SpiderOak . 
+`/usr/lib/systemd/system/spideroak@.service`, copy `spideroak` to
+`/usr/lib/systemd/script/spideroak`, and the file `.spideroak.rc` to
+`~username/.spideroak.rc`. 
 
 ## Configuration
-Configuration is handled through /etc/sysconfig/SpiderOak. The systemd
-service will use the SPIDEROAKOPTS setting to pass options to the SpiderOak
+Configuration is handled through `~username/.spideroak.rc`. The systemd
+service will use the `ARG` variable to pass options to the SpiderOak
 process. '--headless' is automatically included and so does not need to be
-specified in SPIDEROAKOPTS.
+specified in `ARG`.
 
 **Note: the scripts and configuration do not perform any sanity-checking
 on your behalf. For the security of your system and data, ensure that files

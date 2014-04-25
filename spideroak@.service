@@ -1,11 +1,13 @@
 [Unit]
-Description=Spider Oak backup service
+Description=SpiderOak backup service
+Documentation=https://raw.githubusercontent.com/hv15/spideroak-systemd/master/README.md
+Documentation=https://spideroak.com/faq/questions/67/how_can_i_use_spideroak_from_the_commandline/
 
 [Install]
 WantedBy=multi-user.target
 
 [Service]
 Type=simple
-EnvironmentFile=-/etc/sysconfig/SpiderOak
 User=%i
-ExecStart=/usr/bin/SpiderOak --headless $SPIDEROAKOPTS &
+PIDFile=/var/run/SpiderOak.pid
+ExecStart=/usr/lib/systemd/scripts/spideroak %h
