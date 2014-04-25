@@ -11,12 +11,18 @@ This repository includes the following files:
 * COPYING.md         -- the license (public domain where applicable, 
                         CC0 elsewhere) 
 * README.md          -- this file
+* `install.sh`         -- install script (*just for convenience*)
 * `.spideroak.rc`      -- the configuration file
 * `spideroak`          -- the systemd script which deal with applying the
                           configuration from `.spideroak.rc`
 * `spideroak@.service` -- the systemd service file
 
 ## Installation
+### Automatically
+Just run `./install.sh` directly from the git repo, all the files *should*
+be copied over. **This needs root privileges!**
+
+### Manually
 To install on a system using systemd, copy the file 'spideroak@.service' to
 `/usr/lib/systemd/system/spideroak@.service`, copy `spideroak` to
 `/usr/lib/systemd/script/spideroak`, and the file `.spideroak.rc` to
