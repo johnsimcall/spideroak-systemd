@@ -7,7 +7,7 @@
 echo "Checking if $1/.spideroak.rc exists"
 if [ -f "$1/.spideroak.rc" ]; then
     echo "Sourcing..."
-    source "$1/.spideroak"
+    source "$1/.spideroak.rc"
 fi
 
 echo "Starting SpiderOak with ARGs = ${ARG:-'nothing set :('}"
