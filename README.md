@@ -25,8 +25,8 @@ be copied over. **This needs root privileges!**
 ### Manually
 To install on a system using systemd, copy the file 'spideroak@.service' to
 `/usr/lib/systemd/system/spideroak@.service`, copy `spideroak` to
-`/usr/lib/systemd/script/spideroak`, and the file `.spideroak.rc` to
-`~username/.spideroak.rc`. 
+`/usr/lib/systemd/scripts/spideroak`, and the file `.spideroak.rc` to
+`~<username>/.spideroak.rc`. 
 
 ## Configuration
 Configuration is handled through `~username/.spideroak.rc`. The systemd
@@ -40,8 +40,9 @@ have the proper ownership and permissions.**
 
 ## Multi-user support
 For systemd, the provided service file is a template. The text between the 
-@ and . Indicate the user name that SpiderOak should be launched as. Thus
-to start SpiderOak for both user 'funnel' and user 'fiasco' you would run
+`@` and `.` symbols is for specifying a user name that SpiderOak should be
+launched as. Thus to start SpiderOak for both user 'funnel' and user 'fiasco'
+you would run
 
     systemctl spideroak@funnel.service start
     systemctl spideroak@fiasco.service start
