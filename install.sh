@@ -8,7 +8,7 @@ SRC=.spideroak.rc
 
 # Directories
 SERV=/usr/lib/systemd/system
-SCRI=/usr/lib/systemd/script
+SCRI=/usr/lib/systemd/scripts
 
 echo "Copying Service file and Script"
 cp $SRV $SERV
