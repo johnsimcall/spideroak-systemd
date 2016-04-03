@@ -22,6 +22,8 @@ This repository includes the following files:
 Just run `./install.sh` directly from the git repo, all the files *should*
 be copied over. **This needs root privileges!**
 
+Or use the AUR PKGBUILD (*not yet complete*).
+
 ### Manually
 To install on a system using systemd, copy the file 'spideroak@.service' to
 `/usr/lib/systemd/system/spideroak@.service`, copy `spideroak` to
@@ -46,5 +48,3 @@ you would run
 
     systemctl spideroak@funnel.service start
     systemctl spideroak@fiasco.service start
-
-Setting per-user SPIDEROAKOPTS is not currently supported.

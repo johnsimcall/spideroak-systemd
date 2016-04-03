@@ -11,4 +11,4 @@ if [ -f "$1/.spideroak.rc" ]; then
 fi
 
 echo "Starting SpiderOak with ARGs = ${ARG:-'nothing set :('}"
-exec /usr/bin/SpiderOak --headless ${ARG:-}
+exec /usr/bin/SpiderOakONE --headless ${ARG:-}

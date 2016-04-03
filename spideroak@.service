@@ -9,5 +9,4 @@ WantedBy=multi-user.target
 [Service]
 Type=simple
 User=%i
-PIDFile=/var/run/SpiderOak.pid
 ExecStart=/usr/lib/systemd/scripts/spideroak %h
