@@ -22,7 +22,7 @@ This repository includes the following files:
 Just run `./install.sh` directly from the git repo, all the files *should*
 be copied over. **This needs root privileges!**
 
-Or use the AUR PKGBUILD (*not yet complete*).
+Or use the [AUR package][aur].
 
 ### Manually
 To install on a system using systemd, copy the file 'spideroak@.service' to
@@ -48,3 +48,5 @@ you would run
 
     systemctl spideroak@funnel.service start
     systemctl spideroak@fiasco.service start
+
+[aur]: https://aur.archlinux.org/packages/spideroak-systemd-git 
