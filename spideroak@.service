@@ -1,7 +1,7 @@
 [Unit]
 Description=SpiderOak backup service
 Documentation=https://raw.githubusercontent.com/hv15/spideroak-systemd/master/README.md
-Documentation=https://spideroak.com/faq/questions/67/how_can_i_use_spideroak_from_the_commandline/
+Documentation=https://spideroak.com/faq/how-can-i-use-spideroak-from-the-command-line
 
 [Install]
 WantedBy=multi-user.target
