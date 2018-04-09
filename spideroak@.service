@@ -2,11 +2,13 @@
 Description=SpiderOak backup service
 Documentation=https://raw.githubusercontent.com/hv15/spideroak-systemd/master/README.md
 Documentation=https://spideroak.com/faq/how-can-i-use-spideroak-from-the-command-line
-
-[Install]
-WantedBy=multi-user.target
+After=network.target local-fs.target
 
 [Service]
 Type=simple
 User=%i
 ExecStart=/usr/lib/systemd/scripts/spideroak
+
+[Install]
+WantedBy=multi-user.target
+
