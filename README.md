@@ -15,7 +15,7 @@ This repository includes the following files:
 1. `cp SpiderOak@.service /usr/lib/systemd/system/`
 2. `systemctl enable SpiderOakGroups@USERNAME --now`
 
-Optionally, copy or create ~/.spideroak.rc with ARGS="--something"
+Optionally, copy or create ~/.SpiderOakrc with ARGS="--something"
 
 ## Configuration
 Configuration is handled through `~USERNAME/.SpiderOakrc`. The systemd service will use the `ARG` variable to pass options to the SpiderOak process. '--headless' is automatically included and so does not need to be specified in `ARG`.
