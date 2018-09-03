@@ -10,7 +10,7 @@ User=%i
 EnvironmentFile=-%h/.SpiderOakrc
 ExecStartPre=/bin/echo Loading ARGs from %h/.SpiderOakrc
 ExecStartPre=/bin/echo Launching $CMD with ARGs = $ARG
-ExecStart=/usr/bin/SpiderOak --headless $ARG
+ExecStart=/usr/bin/SpiderOakGroups --headless $ARG
 
 [Install]
 WantedBy=multi-user.target
