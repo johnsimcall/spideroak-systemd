@@ -6,11 +6,12 @@ SRV=SpiderOak@.service
 SRC=.SpiderOakrc
 
 # Directories
-SERV=/etc/systemd/system
-
-echo "Copying unit file"
-# This fails because $USER is not allowed to copy files into $SERV
-cp -iv $SRV $SERV/`expr match "$SRV" '\(.*@\)'`$USER.service
+SERV=/usr/lib/systemd/system
 
 echo "Copying RC file to user dir"
 cp -iv $SRC $HOME
+
+echo "Copying unit file"
+sudo cp -iv $SRV $SERV/
+sudo systemctl enable $(expr match "$SRV" '\(.*@\)')$USER.service --now
+sudo systemctl status $(expr match "$SRV" '\(.*@\)')$USER.service

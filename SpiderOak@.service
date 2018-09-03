@@ -1,9 +1,7 @@
-# Install this file at /etc/systemd/system/SpiderOak@$USER.service
-
 [Unit]
-Description=SpiderOak backup service
-Documentation=https://raw.githubusercontent.com/hv15/spideroak-systemd/master/README.md
+Description=SpiderOak backup agent
 Documentation=https://spideroak.com/faq/how-can-i-use-spideroak-from-the-command-line
+Documentation=https://github.com/johnsimcall/spideroak-systemd/blob/master/README.md
 After=network.target local-fs.target
 
 [Service]

@@ -5,4 +5,7 @@
 
 # Currently, the arguments must be specified via the `ARG` variable
 # For example:
+#    ARG="--verbose"
 #    ARG="--purge-historical-versions h24,d14,w4,m6,y"
+
+ARG=""
