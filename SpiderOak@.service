@@ -10,6 +10,7 @@ User=%i
 EnvironmentFile=-%h/.SpiderOakrc
 ExecStartPre=/bin/echo Loading ARGs from %h/.SpiderOakrc
 ExecStartPre=/bin/echo Launching $CMD with ARGs = $ARG
+ExecStartPre=/usr/bin/SpiderOak --print-selection
 ExecStart=/usr/bin/SpiderOak --headless $ARG
 
 [Install]
